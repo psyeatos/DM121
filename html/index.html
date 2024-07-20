@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Online</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+    <header id="header">
+        <h1>João Gabriel Machado Leonardo</h1>
+        <p>Tenho 26 anos, formado em Engenharia da Computação pelo Inatel, cursando pós graduação em Desenvolvimento Mobile e Cloud computing. Trabalho na empresa <a href="https://www.okngroup.com.br/"> OKN group</a> e faço live na <a href="https://www.twitch.tv/psyeatos">Twitch</a>.</p>
+    </header>
+    
+    <section id="projects" class="projects">
+        <h2>Projetos</h2>
+        <div class="project">
+          <img src="../assets/game.png"  width="800" height="400" alt="Imagem do Projeto 1" onclick="showImage(this)">
+            <h3>Game</h3>
+            <p>Um projeto de games desenvolvido durante a matéria DM117 utilizando Unity. Consiste em um game estilo Fall Guys, em que o jogador deve superar obstáculos para chegar no final do circuito no menor tempo.</p>
+        </div>
+        <div class="project">
+          <img src="../assets/vida_simples.png"  width="800" height="400" alt="Imagem do Projeto 2" onclick="showImage(this)">
+            <h3>Aplicativo Vida Simples</h3>
+            <p>Estou fazendo parte do desenvolvimento do aplicativo da revista Vida Simples. Desenvolvido em Flutter</p>
+        </div>
+        <div class="project">
+          <img src="../assets/carta_capital.png"  width="800" height="400" alt="Imagem do Projeto 3" onclick="showImage(this)">
+            <h3>Aplicativo Carta Capital</h3>
+            <p>Fiz parte do desenvolvimento e dos teste do aplicativo da revista Carta Capital, que já está em funcionamento. Também desenvolvido em Flutter</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Conhecimento na área de programação nas linguagens Dart, Vue e C#</li>
+            <li>Resolução de problemas</li>
+            <li>Pensamento criativo </li>
+            <li>Flexibilidade e capacidade de se adaptar a mudanças</li>
+            <li>Proatividade</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
